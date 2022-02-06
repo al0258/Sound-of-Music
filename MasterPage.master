@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MasterPage</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style=" text-align: center;">
+        <table dir="rtl" align="center" cellpadding="20">
+            <tr>
+                <td colspan="2" style="text-align: right">
+                    <asp:Label ID="lbGreet" runat="server" 
+                        style="font-weight: 700; color: #0099FF; font-size: large; font-family: Arial"></asp:Label>
+                    <asp:LinkButton ID="lb_Logout" runat="server" OnClick="lb_Logout_Click"  style="color: blue; font-weight: 700; font-size: large">(התנתק)</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:LinkButton ID="lb_Home" runat="server" OnClick="lb_Home_Click" style="color: #0099FF; font-weight: 700; font-size: large">דף בית</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="lb_EditProd" runat="server" OnClick="lb_EditProd_Click" style="color: #0099FF; font-weight: 700; font-size: large">עריכת מוצרים</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="lb_OrderHistory" runat="server" OnClick="lb_OrderHistory_Click" style="color: #0099FF; font-weight: 700; font-size: large">היסטורית הזמנות</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="lb_Login" runat="server" OnClick="lb_Login_Click" style="color: #0099FF; font-weight: 700; font-size: large">התחבר</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="lb_Register" runat="server" OnClick="lb_Register_Click" style="color: #0099FF; font-weight: 700; font-size: large">הרשמה</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="lb_Store" runat="server" OnClick="lb_Store_Click" style="color: #0099FF; font-weight: 700; font-size: large">חנות</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="lb_Cart" runat="server" OnClick="lb_Cart_Click" style="color: #0099FF; font-weight: 700; font-size: large">סל קניות</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="lb_Manager" runat="server" OnClick="lb_Manager_Click" style="color: #0099FF; font-weight: 700; font-size: large">דף מנהל</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:ImageButton ID="Logo" runat="server" Height="135px" 
+                        ImageUrl="~/Images/Logo.png" onclick="ib_Logo_Click" Width="135px" />
+                </td>
+            </tr>
+        </table>
+
+    <br />
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
